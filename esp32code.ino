@@ -9,6 +9,7 @@
 #define trash 25
 #define button 19
 // led selection function
+
 int Selection(String trashy){
     if(trashy == "cardboard"){
       digitalWrite(cardboard,HIGH);
@@ -63,6 +64,7 @@ void setup() {
   // initialize serial communication at 9600 bits per second:
   Serial.begin(9600);
 }
+
 void loop() {
   // check if data is available
   if (Serial.available() > 0) {
@@ -81,6 +83,7 @@ void loop() {
   }
   
 }
+
 void stop(){
   if(digitalRead(cardboard) == HIGH) digitalWrite(cardboard,LOW);
   if(digitalRead(plastic) == HIGH) digitalWrite(plastic,LOW);
